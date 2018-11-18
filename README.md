@@ -1,6 +1,6 @@
 # One button photo gallery
 
-### for WarsawJS Workshop #26
+### for WarsawJS Workshop #26 but for everyone too!
 
 The idea of this gallery is to make the whole code maximally simple 
 and easy to understand.
