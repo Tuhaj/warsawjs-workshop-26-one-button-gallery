@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>my gallery</title>
+  <style type="text/css">
+    button {
+      display: block;
+      width: 300px;
+      height: 100px;
+      margin: 20px auto;
+      background: green;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    main {
+      text-align: center;
+    }
+    img {
+      height: 100%;
+    }
+    #gallery {
+      display: block;
+      margin: 0 auto;
+      height: 400px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <main>
+    <section id="gallery">
+      <img src="https://avatars3.githubusercontent.com/u/6118271?s=460&v=4">
+      <img src="https://avatars1.githubusercontent.com/u/20089772?s=460&v=4">
+      <img src="https://avatars0.githubusercontent.com/u/244935?s=460&v=4">
+      <img src="https://avatars2.githubusercontent.com/u/3466388?s=460&v=4">
+    </section>
+    <section>
+      <button onclick="showNext()">Show next</button>
+    </section>
+  </main>
+
+  <script type="text/javascript">
+    let array = document.querySelectorAll('img');
+    let position = 0
+    function hideAll() {
+      array.forEach(function(el) {
+        hideElement(el)
+      })
+    }
+
+    function showNext() {
+      hideAll()
+      let element = array[position % array.length]
+      position++
+      showElement(element)
+    }
+
+    function hideElement(element) {
+      element.hidden = true
+    }
+
+    function showElement(element) {
+      element.hidden = false
+    }
+    showNext()
+  </script>
+</body>
+</html>
