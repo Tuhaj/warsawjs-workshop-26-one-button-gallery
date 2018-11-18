@@ -37,21 +37,8 @@
   </main>
 
   <script type="text/javascript">
-    let array = document.querySelectorAll('img')
+    let images = document.querySelectorAll('img')
     let position = 0
-
-    function hideAll() {
-      array.forEach(function(el) {
-        hideElement(el)
-      })
-    }
-
-    function showNext() {
-      hideAll()
-      let element = array[position % array.length]
-      showElement(element)
-      position++
-    }
 
     function hideElement(element) {
       element.hidden = true
@@ -59,6 +46,20 @@
 
     function showElement(element) {
       element.hidden = false
+    }
+
+    function hideAll() {
+      images.forEach(function(element) {
+        hideElement(element)
+      })
+    }
+
+    function showNext() {
+      hideAll()
+      let indexInImagesRange = position % images.length
+      let element = images[indexInImagesRange]
+      showElement(element)
+      position++
     }
 
     // setup gallery

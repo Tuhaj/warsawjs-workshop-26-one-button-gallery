@@ -6,6 +6,8 @@ The idea of this gallery is to make the whole code maximally simple
 and easy to understand.
 Deliberately there is only one file, so the whole code can
 be seen and understood by step-by-step development.
+I didn't use `const` because explaining it goes too much 
+into detail and might be overwhelming for some beginner learners.
 
 The half part of the 8 hour workshop we had was about developing this
 and it was more than enough. Might be actually a whole workshop 
